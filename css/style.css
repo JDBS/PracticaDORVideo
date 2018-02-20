@@ -1,0 +1,209 @@
+body{
+    margin:0;
+    background-color:black;
+    overflow: hidden;
+}
+
+#container>*{
+    border-style:solid;
+    box-sizing: border-box;  
+}
+
+#container {
+    display:flex;
+    width:100%;
+    flex-wrap: wrap;
+    font-family: sans-serif;
+    text-shadow: 0px 0px 5px white;
+}
+
+#container header{
+    flex-basis:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;    
+    background:linear-gradient(rgb(45, 45, 226), rgb(180, 183, 224), rgb(45, 45, 226));
+}
+
+#container header .logo{
+    width:20vw;
+    max-width: 150px;
+    margin:5px;
+}
+
+#container header .login-container{
+    border-style: solid;
+    box-shadow: 3px 3px 3px black;
+    border-radius:4px;
+    display: flex;
+    align-items: center;
+    padding:4px;
+    margin:12px;
+    background-color:lightcyan;
+}
+
+#container header .login-container:active{
+    border-style: solid;
+    box-shadow: 2px 2px 2px black inset;
+    border-radius:4px;
+    display: flex;
+    align-items: center;
+    padding:4px;
+    margin:12px;
+}
+
+#container header img{
+    width:1.6em;
+}
+
+#container header span{
+    font-weight: bold;
+}
+#container section{
+    flex-basis:75vw;
+    background-color:black;
+    box-shadow: -1px 0px 1px white;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#container section .display{
+    border-style:solid;
+    box-sizing: border-box;  
+    display:flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+#container .display video, #container .display img{
+    max-width: 74vw;
+    height:40vh
+}
+
+#container aside{
+    flex-basis:25vw;
+    box-shadow: -1px 0px 1px white;
+    box-sizing: border-box;
+    flex-grow: 1;
+    flex-shrink: 1;
+}
+
+#container .controller{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    background:linear-gradient(rgb(45, 45, 226), rgb(180, 183, 224), rgb(45, 45, 226));
+    box-shadow: 0px 0px 8px black inset;
+    height: 12vw;
+}
+
+#container .controller>div{
+    width: 8vw;
+    height: 8vw;
+    border-style: solid;
+    border-radius:100%;
+    transition: transform 0.35s;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    background: radial-gradient(rgb(59, 59, 255),rgb(5, 5, 27));
+    box-shadow: 0.3vw 0.3vw 0.3vw black;
+}
+#container .controller div img{
+   width: 80%;
+   fill:red;
+}
+
+#container .controller>div:hover{
+    transform:scale(1.25);
+    background: radial-gradient(rgb(49, 121, 255),rgb(10, 10, 35));
+}
+
+#container .controller>div:active{
+    background: radial-gradient(rgb(49, 224, 255),rgb(26, 26, 121));
+    transform:scale(1.1);
+}
+
+#container .list{
+    background-color:black;
+}
+
+#container .list .media{
+    border-style: solid;
+    min-height: 60px;
+
+    overflow: hidden;
+    box-sizing: border-box;
+    
+    text-align: center;
+    background:linear-gradient(rgb(74, 74, 235), rgb(180, 183, 224), rgb(106, 106, 235));
+
+    box-shadow: -1px 0px 1px white;
+}
+
+#container .list .media:hover{
+    background:linear-gradient(rgb(144, 144, 255), rgb(180, 183, 224), rgb(184, 184, 250));
+}
+
+#container .list .media img{
+    display:none;
+}
+
+#container .list .media h4{
+    margin:1vw;
+}
+
+#container .list .playing{
+    background:linear-gradient(rgb(235, 171, 74), rgb(180, 183, 224), rgb(245, 184, 92));
+    position:relative;
+}
+
+#container .list .playing img{
+    position:absolute;
+    left:4px;
+    top: calc(50% - 25px);
+    display:inherit;
+    width:50px;
+}
+
+#container footer{
+    flex-basis:100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background:linear-gradient(rgb(45, 45, 226), rgb(180, 183, 224), rgb(45, 45, 226));
+}
+#container footer h1{
+    margin-left:35%;
+    text-align: center;
+}
+#container footer img{
+    width:20vw;
+    margin:5px;
+}
+
+.hidden{
+    display: none !important;
+}
+
+
+/*max-aspect-ratio*/
+@media(min-width:890px){
+    #container .display{
+        overflow: hidden;
+        text-align: center;
+        background-color:black;
+    }
+}
+@media (max-width:879px){
+    #container>section{
+        flex-basis: 100%;
+    }
+    #container>aside{
+        flex-basis: 100%;
+    }
+    body{
+        overflow-y:inherit;
+    }
+}
